@@ -3,5 +3,16 @@
         "name":"Brad Pitt",
         "department" : "IT",
         "salary": 4000
+    },
+    {
+        "name":"christoph",
+        "department" : "IT",
+        "salary": 6000
+    },
+    {
+        "name":"Meister",
+        "department" : "IT",
+        "salary": 5000
     }
+  
 ]

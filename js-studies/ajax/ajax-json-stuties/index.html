@@ -11,7 +11,7 @@
     <title>Ajax and JSON examples</title>
   </head>
   <body>
-    <button type="button" class="btn btn-primary">Get Person Informations</button>
+    <button id="ajax" type="button" class="btn btn-primary">Get Person Informations</button>
     <br><br>
     <table class="table">
         <thead>
@@ -22,10 +22,18 @@
             <th scope="col">Handle</th>
           </tr>
         </thead>
-        
+        <tbody id="employees">
+         <!--  <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr> -->
+        </tbody>
       </table>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!--  JavaScript;  -->
+    <script src="app.js"></script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
