@@ -1,4 +1,0 @@
-"Cabbar's Style_Ferdi_Ates" isimli dosya flowcarttir,
-"apps.js" isimli dosya javascript kodlarinin oldugu dosyadir.
-"index.html" isimli dosya web sayfasidir.
- 
