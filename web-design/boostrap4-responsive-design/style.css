@@ -95,9 +95,16 @@ h3{
         background-repeat: no-repeat;
         background-size: cover;
         }
+
+    #park .row{
+        height: 300px;
+    }
 #caseStudy{
     background-color: #f4f5f9;
+    line-height: 28px;
+    font-size: 18px;
 }
+
 .caseArea{
     background-color: #fff;
     margin-top:40px;
@@ -105,14 +112,14 @@ h3{
     z-index: 100;
     padding: 40px;
     position: relative;
-    min-height: 400px;
+    min-height: 420px;
 }
 #caseStudy h3{
-    font-size: 18px;
+    font-size: 28px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #1886C7;
 }
-#caseStudy{
-    font-size: 40px;
+.caseImage{
+    margin-left: -40px;
 }
