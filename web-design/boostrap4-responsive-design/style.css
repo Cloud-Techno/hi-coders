@@ -1,0 +1,86 @@
+body{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+.navbar{
+    border-bottom: #1886C7 1px solid;
+}
+.navbar .navbar-brand{
+    color:#1886C7;
+    font-size: 24px;
+}
+.bg-dark{
+    background-color: #151b1d !important;
+}
+.nav-link{
+    color: white !important;
+    text-transform: uppercase;
+    transition: color .5s ease;
+}
+.nav-link:hover{
+    color: #1886C7 !important;
+    border-bottom:  #1886C7 1px solid;
+}
+#headerSection{
+    background: url("./images/backgr.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+.overlay{
+    background-color: rgba(0,0,0,0.7);
+}
+#headerSection .row {
+    height: 100vh;
+}
+#headerSection span {
+    color: blue;
+}
+.btn-outline-primary{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+}
+
+/* FEATURES SECTION */
+#feature .fab, .fas {
+    font-size: 40px;
+}
+.feature-top{
+    transition: color .5s ease;
+}
+.feature-top:hover{
+    color: #1886C7;
+}
+#nature{
+    border-left: #1886C7 3px solid;
+    padding-left: 30px;
+    }
+    #event{
+        color: #1886C7;
+    }
+#winter{
+    background-size: cover;
+    height: 50vh; 
+ }
+ 
+ #nature .btn-outline-primary{
+     position: absolute;
+    }
+#landscape .card{
+    border: none;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+#landscape .card:hover{
+    opacity: 1;
+}
+#landscape i{
+    font-size: 24px;
+}
