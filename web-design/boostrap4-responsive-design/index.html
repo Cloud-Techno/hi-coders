@@ -222,7 +222,7 @@
     </section>
 
   <!-- PARK SECTION -->
-     <section id="park" >
+     <section id="park" class="py-5" >
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -230,30 +230,52 @@
             <p class="text-muted"><em>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, molestias.</em></p>
           </div>
           <div class="col-md-6 text-center mx-auto">
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalpark">Open Modal</button>
+           
+            <a href="#" class="video" 
+            data-toggle="modal" 
+            data-target="#modalpark" 
+            data-video="https://www.youtube.com/embed/u8kg3jkAt0I">
+              <i class="fas fa-play fa-5x"></i>
+            </a>
           </div>
         </div>
       </div>
      </section> 
      <!-- PARK MODAL --><!-- Modal -->
 <div class="modal fade" id="modalpark" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" >&times;</button>
-      </div>
-      <div class="modal-body">
-       <p>Life is exciting in Zurich</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>      
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/u8kg3jkAt0I" frameborder="0" allowfullscreen></iframe>
+                  </div>
+            
+        </div>
+    
     </div>
-  </div>
 </div>
   
+<!-- CASE STUDY SECTION -->
+<div id="caseStudy" class="py-5px">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-md-6">
+          <div class="caseArea"> text-center
+            <i class="fa fa-podcast" aria-hidden="true"></i>
+            <h3>CREATIVE AREAS</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ipsum reprehenderit exercitationem est earum eius laboriosam eum nemo tenetur id, quia, voluptas voluptatibus quasi inventore iste beatae excepturi distinctio quisquam!</p>
+            <button type="button" class="btn btn-outline-primary">Action  </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="caseImage">
+            <img src="./images/flag.jpg" alt="Swiss Flag">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
