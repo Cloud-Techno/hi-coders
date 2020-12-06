@@ -16,6 +16,7 @@ h3{
 }
 .bg-dark{
     background-color: #151b1d !important;
+    background: linear-gradient(#1886C7,#151b1d);
 }
 .nav-link{
     color: white !important;
@@ -114,12 +115,47 @@ h3{
     position: relative;
     min-height: 420px;
 }
-#caseStudy h3{
+#caseStudy h3, i{
     font-size: 28px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 20px;
     color: #1886C7;
 }
 .caseImage{
     margin-left: -40px;
 }
+#portfolio h4{
+    font-size: 16px;
+    font-weight: 300;
+
+}
+#portfolio p{
+    font-size: 14px;
+    font-weight: 300;
+}
+#portfolio .fas{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.imageContainer{
+    position: relative;
+    cursor: pointer;
+}
+.portOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1886C7;
+     opacity: 0;
+    transition: 1s ease;
+    }
+   .imageContainer:hover .portOverlay {
+        opacity: 1;
+    }
+    .portText{
+        color: white;
+    } 
