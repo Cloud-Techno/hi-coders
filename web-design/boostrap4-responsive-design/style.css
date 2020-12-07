@@ -124,38 +124,74 @@ h3{
 .caseImage{
     margin-left: -40px;
 }
-#portfolio h4{
+
+/* PORTFOLIO SECTION */
+ #portfolio .col-md-3{
+        padding-left: 0;
+        padding-right:0;
+        text-align: center;
+ }
+ #portfolio h4{
     font-size: 16px;
     font-weight: 300;
-
+}
+#portfolio .fas{
+    font-size: 24px;
+    color: white;
 }
 #portfolio p{
     font-size: 14px;
     font-weight: 300;
 }
-#portfolio .fas{
-    font-size: 24px;
-    margin-bottom: 20px;
-}
 .imageContainer{
     position: relative;
     cursor: pointer;
 }
-.portOverlay {
+.imageOverlay{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     background-color: #1886C7;
-     opacity: 0;
-    transition: 1s ease;
-    }
-   .imageContainer:hover .portOverlay {
-        opacity: 1;
-    }
-    .portText{
-        color: white;
-    } 
+    opacity: 0;
+    transition: 0.5s ease;
+
+}
+.imageContainer:hover .imageOverlay{
+    opacity: .7;
+}
+.imageText{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* CAROUSEL SECTION */
+.carousel-control-prev-icon{
+    width: 40px;
+    height: 40px;
+}
+.carousel-control-next-icon{
+    width: 40px;
+    height: 40px;
+}
+#contact{
+    background-color: #f4f5f9;
+}
+#contact h2,h4{
+    color: #1886c7;
+}
+#mainFooter{
+    color: white;
+    background-color:#141b1c;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+#mainFooter p{
+    margin-bottom: 0;
+}
