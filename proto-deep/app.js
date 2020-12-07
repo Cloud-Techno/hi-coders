@@ -21,7 +21,6 @@ Employee.prototype.myTest = function(){
 }
 
 const emp = new Employee("Ferdi",31);
-
-emp.test1();
-
+const emp2 = new Employee("Vedat",32);
 console.log(emp);
+console.log(emp2);
