@@ -11,6 +11,9 @@
     <!-- Style-CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- scroll Reveal JS -->
+    <script src="scrollreveal.js"></script>
+
     <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">    <!-- Font Awesome CSS-->
@@ -50,10 +53,10 @@
       <header id="headerSection">
           <div class="overlay">
               <div class="container ">
-                  <div class="row text-center">
+                  <div class="row text-center mainContent">
                       <div class="col my-auto">
-                          <h1 class="display-3 text-white" >Happy New Year <span>2021</span></h1>
-                          <p class="font-italic"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, officia libero. Quidem veniam esse quam ad provident velit quasi facere iste exercitationem</p>
+                          <h1 class="display-3 text-white mb-3" >Happy New Year <span>2021</span></h1>
+                          <p class="font-italic text-white mb-3"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, officia libero. Quidem veniam esse quam ad provident velit quasi facere iste exercitationem</p>
                               <button type="button" class="btn btn-outline-primary">Action</button>
                       </div>
                   </div>
@@ -102,10 +105,10 @@
       <section id="nature" class="mt-5">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 mx-auto">
-                <img src="./images/bg.jpg" id="winter" class="img-fluid" alt="Nature">
+            <div class="col-md-6 mx-auto event-left">
+                <img src="./images/bg.jpg" id="winter" class="img-fluid rounded" alt="Nature">
                </div>
-            <div class="col-md-6">
+            <div class="col-md-6 event-right">
               <h2 class="mb-5" id="event">Events of Christmas</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est velit ex fuga ab excepturi, rerum nobis architecto ea eum porro ipsam quis, cupiditate numquam ipsa consequatur magnam delectus ad nesciunt?</p>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et veniam, iste aliquid aperiam temporibus praesentium ad ex nam quos voluptatem quo quam blanditiis rem qui sequi illum dicta eos. At!</p>
@@ -119,7 +122,7 @@
     <section id="landscape" class="mt-5" >
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 lake1">
               <div class="card text-center">
                 <div class="card-block">
                   <img src="./images/zurih.jpg" class="img-fluid rounded-circle my-4" alt="Swiss Flag">
@@ -144,7 +147,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 lake2">
               <div class="card text-center">
                 <div class="card-block">
                   <img src="./images/zurih.jpg" class="img-fluid rounded-circle my-4" alt="Swiss Flag">
@@ -169,7 +172,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 lake3">
               <div class="card text-center">
                 <div class="card-block">
                   <img src="./images/zurih.jpg" class="img-fluid rounded-circle my-4" alt="Swiss Flag">
@@ -194,7 +197,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 lake4">
               <div class="card text-center">
                 <div class="card-block">
                   <img src="./images/zurih.jpg" class="img-fluid rounded-circle my-4" alt="Swiss Flag">
@@ -511,7 +514,7 @@
                   </div>
                    <textarea class="form-control" placeholder="Message" rows="5"></textarea>
                  </div>
-                <input type="submit" value="SUBMIT" class="btn btn-outline-primary btn-block" >
+                <input type="submit" value="SUBMIT" class="btn btn-outline-primary btn-block mb-3" >
             </form>
           </div>
         </div>
@@ -543,6 +546,46 @@
 
     <script>
       var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal('.mainContent',{
+        duration:3000
+      });
+      sr.reveal('.event-left',{
+        duration:3000,
+        origin:'left',
+        viewFactor:0.2
+      });
+      sr.reveal('.event-right',{
+        duration:3000,
+        origin:'right',
+        viewFactor:0.3
+      });
+      sr.reveal('.lake1',{
+        duration:3000,
+        origin:'left',
+        viewFactor:0.2
+      });
+      sr.reveal('.lake2',{
+        duration:3000,
+        delay:500,
+        origin:'left',
+        viewFactor:0.2
+      });
+      sr.reveal('.lake3',{
+        duration:3000,
+        delay:1000,
+        origin:'left',
+        viewFactor:0.2
+      });
+      sr.reveal('.lake4',{
+        duration:3000,
+        delay:1500,
+        origin:'left',
+        viewFactor:0.2
+      });
     </script>
   </body>
 </html>
