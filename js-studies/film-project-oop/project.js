@@ -29,7 +29,8 @@ function addFilm(e){
 
             ui.addFilmToUI(newFilm); //add film for UI
         }
-ui.clearInput(titleElement,urlElement,directorElement);
+
+    ui.clearInput(titleElement,urlElement,directorElement);
 
     e.preventDefault();
 }
