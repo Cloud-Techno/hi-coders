@@ -1,12 +1,29 @@
+let questions = [
+    "inek sayisini giriniz",
+    "tavuk sayisini giriniz",
+    "koyun sayisini giriniz",
+    "domuz sayisini giriniz",
+    
+]
 
-const maxRightGuess = 4;
-//Random numbers of wagon between 1 and 10. 
-let wagonOfSuspicious = Math.floor((Math.random() * 10) + 1);
-let guessNumber = 0;
+let answerList = [];
 
-// You have to find out the suspicious in 4 times guess
-// I will help you if you approach number of wagon .
+for (let index = 0; index <questions.length; index++){
+  let nextQuestion = questions[index];
 
-for (let i=0; i<4; i++){
-    let guess = parseInt(prompt("Let's guess about suspicious wagon"));
+  let answer = prompt(nextQuestion);
+  answerList.push(answer);
 }
+let ikiBacakli =0;
+let dortBacakli = 0;
+for(let index = 0; index<answerList.length; index++){
+    if (answerList[index] == answerList[1]) {
+         ikiBacakli = +answerList[1] * 2;
+    }
+    else{
+        dortBacakli += parseInt(answerList[index]) * 4;
+    }
+   
+}
+
+console.log(ikibacakli+dortBacakli);
