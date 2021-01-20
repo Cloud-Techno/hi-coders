@@ -1,0 +1,32 @@
+main{
+    margin:0 auto;
+    width: 40vw;
+}
+section{
+    text-align: center;
+    margin: 10px;
+}
+#battery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    
+}
+#battery div{
+    height: 50px;
+    
+}
+
+.enerji-level-0 div{
+    background-color: white;
+}
+.enerji-level-1 div:last-child{
+    background-color:red;
+}
+.enerji-level-2 div:nth-child(2), .enerji-level-2 div:last-child {
+    background-color: orange;
+}
+.enerji-level-3 div{
+    background-color:green;
+}
