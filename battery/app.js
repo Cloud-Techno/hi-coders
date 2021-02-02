@@ -18,8 +18,8 @@ const azalanElement = document.getElementById('decreaseButton');
 artanElement.addEventListener('click',doldur);
 azalanElement.addEventListener('click',azalt);
 
-//batarya elementini degiskene atama
-const batteryElement = document.getElementById('battery');
+const batteryElement = document.getElementById('battery');//batarya elementini degiskene atama
+
 function doldur(){
     if(enerjiLevel<3){
         enerjiLevel++;

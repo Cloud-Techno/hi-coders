@@ -1,40 +1,67 @@
-//1- High than 500 kg Stock Volumes are filtered
-  function highVolumeStock(pArr){
-    let highStock = pArr.filter(item =>item.stockVolumeInKg > 500);
-    let fishNameListInStockOver500 = highStock.map(fish.fishType);
-    return fishNameListInStockOver500;
-    }
- /*   
-//2-
-function goodPrice(pArr){
-    let availablePrice = pArr.filter(item => item.price >=9 && item.price =< 13)
-    return availablePrice;
-} 
-
-// 3- BERN DE OLANLAR EKLENECEK
-function bernWinterFish(pArr){
-    let results = pArr.filter(item => item.season =="Winter");
-         return results;
-       } /**/
-// 4--TARIHSEL SIRALAMA
- /* function sortOnDate(pArr){
-      pArr.sort(function(a, b) {return b.entryDate - a.entryDate} )
+//Print Names of Fishes
+function  showName(pArray,pMessage){
+    console.log(pMessage);
+     pArray.map(item => 
+       console.log(item.fishType))
+}
+function showValue (pValue,pMessage){
+    console.log(pValue);
+    console.log(pMessage);
+}
+function sortArrayByAlfabeticNumber(pArray){
+    return pArray.sort(function(a, b) {
+        let nameA = a.fishType.toUpperCase(); // ignore upper and lowercase
+        let nameB = b.fishType.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
       
- } */
+        // names must be equal
+        return 0;
+      })
+}
+
+// Number 1 solution
+function getFishesHeavierThanStock(pArray,pStock){
+    return pArray.filter(item => item.stockVolumeInKg > pStock);
+}
+
+// Number 2 solution
+function betweenPrice(pArray,pLowerPrice,pUpperPrice){
+    return pArray.filter(item=> item.price > pLowerPrice &&
+                                item.price < pUpperPrice)
+}
+
+// Number 3 solution
+function getWinterFishInBern (pArray,pLocation,pSeason){
+    return pArray.filter(item => item.saleLocations.includes(pLocation) && item.season == pSeason )
+}
+
+// Number 4 solution
+/* function sortFishesExpireDate(pArray){
+    pArray.map(item => 
+        item.entryDate.sort(function(a, b) {
+            return a - b;
+          }))
+} */
+
+// Number 5 solution
+function getFishesFromEuropean(pArray,pEuropeanCountries){
+    return pArray.filter(item => {
+        return pEuropeanCountries.some(country =>
+            item.originCountry === country)
+    })
        
-
-/* 
-
-/// bu fonksiyon kontrol et
-function expensiveFish(pArr){
-    let expensiestFish = pArr.filter(item => item.price >8 && item.price < 13)
-    return expensiestFish.fishType;
 }
 
-
-function totalFishStock(pArr){
-    let total = pArr.reduce((sum, item)=> sum + item.stockVolumeInKg,0);
-        return total;
+function filterFishesCheaperThan10(pArray,pPrice){
+    const listOfFishesLessThanPrice= pArray.filter(item =>item.price > pPrice)
+    return sortArrayByAlfabeticNumber(listOfFishesLessThanPrice);
+   }
+// Number 6 solution
+function calculateTotalFishStock(pArray){
+    return pArray.reduce(( total, item) => total + item.stockVolumeInKg, 0)
 }
-
- */

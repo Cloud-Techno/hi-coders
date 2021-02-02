@@ -12,46 +12,62 @@
 *   11) Yazlik sezonda cikan ve AB disindan gelen ve de ZH'de satilan baliklarin ortalama gramajini bulunuz?
 */
 
-function getFishName(pList){
-    return pList.map(fish =>fish.fishType);
-}
+const AMOUNT_OF_STOCK = 500;
+const LOWER_PRICE = 9;
+const UPPER_PRICE = 12;
+const SEASON = "Winter"
+const LOCATION = "BE"
+const CHEAPER_PRICE_FOR_EUROPE = 10;
+const EUROPE_COUNTRIES = ["Norway","United Kingdom","Poland","France","Italy","GREECE","Spain"]
 
-function stringifyArray(pList){
-    return pList.join(",")
-}
+/**
+ * 1- Name of fishes heavier than 500 kg stock in Array
+ */
+const listOfFishesHeavierThan500 = getFishesHeavierThanStock(fishFarm,AMOUNT_OF_STOCK);
+showName(listOfFishesHeavierThan500,"1-Name of fishes heavier than 500 kg stock in Array:")
+/**
+ * 2- Fishes are Between 9 and 12 fr 
+ */
+ const listOfFishInPriceRange = betweenPrice(fishFarm,LOWER_PRICE,UPPER_PRICE);
+ showName(listOfFishInPriceRange, "2-Fishes are Between 9 and 12 fr : ")
+/**
+ * 3-Fishes are only in Bern and sell only at Winter
+ */
+const listOfOnlyBernWinterFish = getWinterFishInBern(fishFarm,LOCATION,SEASON);
+showName(listOfOnlyBernWinterFish,"3-Fishes are only Bern canton in the Winter Season");
+/**
+ * 4-Sort Fishes based on expire time
+ */
+//const sortFishesBasedOnExpireTime = sortFishesExpireDate(fishFarm)
+//showName(sortFishesBasedOnExpireTime,"4-Sort Fishes based on expire time")
+/**
+ * 5- Sort Fishes cheaper than 10 Fr accourding to Alfabetic from AB 
+ */
+const fishesFromEurope = getFishesFromEuropean(fishFarm,EUROPE_COUNTRIES);
+const fishesCheaper10 = filterFishesCheaperThan10(fishesFromEurope,CHEAPER_PRICE_FOR_EUROPE)
+showName(fishesCheaper10," 5- Sort Fishes cheaper than 10 Fr accourding to Alfabetic from AB");
+/**
+ * 6-Total amount of Fishes Stock
+ */
+const totalFishStock = calculateTotalFishStock(fishFarm)
+showValue(totalFishStock, "Toplam balik stok miktari :")
+/**
+ *7- The highest Price Fishes
+ */
 
+/**
+ * 8- Which Fishes can be stay for longest
+ */
 
-const filteredHighVolumeStock = fishFarm.filter(item => item.stockVolumeInKg > 500);
-const fishNameHighVolumeStock = getFishName(filteredHighVolumeStock);
+/**
+ * 9-Average Fishes Price in Winter and Autoum and Romance Part of Switzerland 
+ */
 
+/**
+ * 10- How much kg in Stock to Ticino Canton
+ */
 
-const domContainerFishName = document
-
-//1-High than 500 kg Stock Volumes are filtere
-//let  highVolumeStock(fishFarm);
-//console.log(filteredHighVolumeStock);
-
-//2- Fishes are between 9fr and 12fr
-//let filteredGoodPriceFish = goodPrice(fishFarm);
-//console.log(filteredGoodPriceFish);
-
-//3-Only at the Bern and in the Winter Fishes
-//let bernWinter = bernWinterFish(fishFarm);
-//console.log(bernWinter);
-
-//4-tarihsel siralama
-//let sortingDate = sortOnDate(fishFarm);
-//console.log(sortingDate);
-
-
-
-//6-Total Fish Stock
-//let totalFish = totalFishStock(fishFarm);
-//console.log(totalFish);
-
-//7-The most expensive fish
-//let mostPriceFish = expensiveFish(fishFarm);
-//console.log(mostPriceFish);
-
-Array
- fishFarm.forEach(fish => document.getElementById('output').innerHTML +=fish.fishType); 
+/**
+ * 11- Average Fishes sells at ZH and produce in Summer season from out of AB countries
+ */
+ 
