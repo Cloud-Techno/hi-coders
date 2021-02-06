@@ -18,7 +18,11 @@ const UPPER_PRICE = 12;
 const SEASON = "Winter"
 const LOCATION = "BE"
 const CHEAPER_PRICE_FOR_EUROPE = 10;
+const ROMANDE_CANTONS=["GE","VD","NE"];
+const ROMANDE_SEASON =["Winter","Autumnm"];
+const LOCATION_TI = "TI"
 const EUROPE_COUNTRIES = ["Norway","United Kingdom","Poland","France","Italy","GREECE","Spain"]
+
 
 /**
  * 1- Name of fishes heavier than 500 kg stock in Array
@@ -38,8 +42,8 @@ showName(listOfOnlyBernWinterFish,"3-Fishes are only Bern canton in the Winter S
 /**
  * 4-Sort Fishes based on expire time
  */
-//const sortFishesBasedOnExpireTime = sortFishesExpireDate(fishFarm)
-//showName(sortFishesBasedOnExpireTime,"4-Sort Fishes based on expire time")
+const sortFishesBasedOnExpireTime = sortFishesExpireDate(fishFarm)
+showName(sortFishesBasedOnExpireTime,"4-Sort Fishes based on expire time")
 /**
  * 5- Sort Fishes cheaper than 10 Fr accourding to Alfabetic from AB 
  */
@@ -50,24 +54,33 @@ showName(fishesCheaper10," 5- Sort Fishes cheaper than 10 Fr accourding to Alfab
  * 6-Total amount of Fishes Stock
  */
 const totalFishStock = calculateTotalFishStock(fishFarm)
-showValue(totalFishStock, "Toplam balik stok miktari :")
+showValue(totalFishStock, "6-Total amount of Fishes Stock")
 /**
  *7- The highest Price Fishes
  */
-
+const highestPriceFish = getHighestPrice(fishFarm);
+ showValue(highestPriceFish,"7- The highest Price Fishes???????");
 /**
- * 8- Which Fishes can be stay for longest
+ * 8- Which Fishes that can be stand for longest came from which coutnry?
  */
-
+//const longestFish = getLongestSustainableFish(fishFarm);
+const listOfFishLongestStanding = getLongestSustainableFish(fishFarm)
+showValue(listOfFishLongestStanding.originCountry,"8- Country of Fish  that can be stand for longest: ")
 /**
  * 9-Average Fishes Price in Winter and Autoum and Romance Part of Switzerland 
  */
-
+const listOfFishSalesRomanRegions = getAveragePriceForSRRWinterAutumn(fishFarm,ROMANDE_CANTONS)
+showValue(listOfFishSalesRomanRegions,"9-Average Fishes Price in Winter and Autoum and Romance Part of Switzerland ")
 /**
  * 10- How much kg in Stock to Ticino Canton
  */
+const listOfFishTotalStockSalesTicino = getListOfFishTotalStockSalesTicino(fishFarm,LOCATION_TI)
+showValue(listOfFishTotalStockSalesTicino,"10- How much kg in Stock to Ticino Canton")
+
 
 /**
  * 11- Average Fishes sells at ZH and produce in Summer season from out of AB countries
  */
- 
+const listOfFishFromOutsideEurope = getFishesFromOutsideEurope(fishFarm)
+const averageFishListZurihInSummer = getFishesZurihInSummer(listOfFishFromOutsideEurope)
+showValue(averageFishListZurihInSummer, " 11- Average Fishes sells at ZH and produce in Summer season from out of AB countries" )
