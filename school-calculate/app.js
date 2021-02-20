@@ -8,7 +8,7 @@ const registerCard = document.getElementById("register-card");
 const allStudentListElement = document.getElementById("all-students-list");
 const totalStudentElement = document.getElementById("total-student");
 const students = document.getElementById("students");
-
+const btn = document.getElementById("endexam");
 
 // all events in this function
 allEventListener();
@@ -16,7 +16,7 @@ allEventListener();
  function allEventListener(){
      form.addEventListener("submit",addStudent);
      allStudentListElement.addEventListener("click",startSession);
-  
+    
  }
 
  //Create new Student Object
@@ -61,23 +61,17 @@ function startSession(e){
     
     if(clickedStudentToSession.className ==="btn btn-success"){
        // window.addEventListener("load", renderQuestion, false);
-      gizleGoster(questions);
-       renderQuestion();
-
-        
-        
-        //let index = parseInt(clickedStudentToSession.id);
-       startQuestion(questions);
-       
-        addStudentToUI(studentList);
+    displayQuiz(questions);
+    renderQuestion();
+    addStudentToUI(studentList);
 
 
     }
     
 }
 
-function gizleGoster(questions) {
-  var secilenID = document.getElementById("questions");
+function displayQuiz(questions) {
+  const secilenID = document.getElementById("questions");
   if (secilenID.style.display == "none") {
     secilenID.style.display = "";
   } else {

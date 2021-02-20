@@ -4,10 +4,12 @@ function addStudentToUI(pNewStudent){
 }
 
 function createStudent(pList){
+    
     return pList.map((item,index) =>`
     <tr>
         <td>${item.name}</td>
         <td>${item.surname}</td>
+        <td>${showScore}</td>
         <td><a href="#" id = "${index}" class = "btn btn-success">Oturum Ac</a></td>
    </tr>
     `).join('');

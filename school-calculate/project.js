@@ -14,7 +14,6 @@ function renderQuestion(){
        
         test.innerHTML = "<h3>You got "+correct+" correct of "+questions.length+" questions</h3>";
         test.innerHTML += "<h3> Your Grade : "+showScore +"% </h3>";
-        test.innerHTML +="<h4>Exam Finished in Time:" + sec+" Seconds</h4>";
         test.innerHTML += "<button onclick='EndExam()'>End the Exam</button>";
         getID("test_status").innerHTML = "<h3>Test Completed</h3>";
         pos = 0;
@@ -23,7 +22,7 @@ function renderQuestion(){
 
 
         clearTimeout(tim);
-        //document.getElementById("endtime").innerHTML = "<h4>Finished Time:"+min+" Minutes :" + sec+" Seconds</h4>";
+        document.getElementById("endtime").innerHTML = "<h4>Finished Time:" + sec+" Seconds</h4>";
         document.getElementById("starttime").style.display += 'none';
         document.getElementById("showtime").style.display += 'none';
         document.getElementById("showtime").style.display += 'block';
@@ -80,9 +79,8 @@ location.href="index.html";
         }
         function showtime() {
             if (parseInt(sec) > 0) {
-                let restSec = 100 - sec;
                 sec = parseInt(sec) - 1;
-                document.getElementById("showtime").innerHTML = "Your Left Time is :"+restSecsec+" Seconds";
+                document.getElementById("showtime").innerHTML = "Your Left Time is :"+sec+" Seconds";
                 tim = setTimeout("showtime()", 1000);
             }
             else {
