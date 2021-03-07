@@ -9,7 +9,6 @@ function createStudent(pList){
     <tr>
         <td>${item.name}</td>
         <td>${item.surname}</td>
-        <td>${showScore}</td>
         <td><a href="#" id = "${index}" class = "btn btn-success">Oturum Ac</a></td>
    </tr>
     `).join('');

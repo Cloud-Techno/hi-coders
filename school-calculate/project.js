@@ -11,15 +11,13 @@ function renderQuestion(){
 
 
     if(pos >= questions.length){
-       
-        test.innerHTML = "<h3>You got "+correct+" correct of "+questions.length+" questions</h3>";
+      
+ test.innerHTML = "<h3>You got "+correct+" correct of "+questions.length+" questions</h3>";
         test.innerHTML += "<h3> Your Grade : "+showScore +"% </h3>";
         test.innerHTML += "<button onclick='EndExam()'>End the Exam</button>";
         getID("test_status").innerHTML = "<h3>Test Completed</h3>";
-        pos = 0;
+         pos = 0;
         correct = 0;
-
-
 
         clearTimeout(tim);
         document.getElementById("endtime").innerHTML = "<h4>Finished Time:" + sec+" Seconds</h4>";
@@ -57,7 +55,6 @@ function checkAnswer(){
     pos++;
     renderQuestion();
 }
-
 
 
 

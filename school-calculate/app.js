@@ -20,9 +20,10 @@ allEventListener();
  }
 
  //Create new Student Object
- function Student (name,surname){
+ function Student (name,surname,puan){
     this.name = name;
     this.surname = surname;
+    this.puan = puan;
 }
 // Registred students list array
 let studentList =[];
@@ -45,7 +46,8 @@ function addStudent(e){
         studentList.push(newStudent);
         //creat students on the UI
         addStudentToUI(studentList); 
-      /*   addStudentToStorage(newStudent); */
+        //add student list to LocalStorage
+       addStudentToStorage(newStudent);
         showAlert('success',"Successfully")
         
     }
@@ -64,11 +66,8 @@ function startSession(e){
     displayQuiz(questions);
     renderQuestion();
     addStudentToUI(studentList);
-
-
-    }
-    
-}
+ }
+ }
 
 function displayQuiz(questions) {
   const secilenID = document.getElementById("questions");

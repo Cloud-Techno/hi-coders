@@ -4,7 +4,7 @@
 *   3) Sadece Bern'de ve kis sezonu satilan baliklar hangileridir?
 *   4) Son kullanma tarihlerine gore baliklari siralayiniz. (Son kullanma tarihi yaklasan baliklar once gosterilmelidir)
 *   5) Avrupa Birligi'nden (AB) gelen ve fiyati 10Fr dan dusuk olan baliklari alfabetik siraya gore siralayiniz.
-*   +6) Toplam balik stoku ne kadardir?
+*   6) Toplam balik stoku ne kadardir?
 *   7) En pahali olan balik hangisidir? 
 *   8) En uzun sureli durabilen baliklar hangi ulkeden gelmektedir?
 *   9) Kis ve sonbahar sezonu icin swiss romande region'da satilan baliklarin ortalama fiyati nedir?
@@ -16,12 +16,13 @@ const AMOUNT_OF_STOCK = 500;
 const LOWER_PRICE = 9;
 const UPPER_PRICE = 12;
 const SEASON = "Winter"
-const LOCATION = "BE"
+const LOCATION = "BE";
 const CHEAPER_PRICE_FOR_EUROPE = 10;
 const ROMANDE_CANTONS=["GE","VD","NE"];
 const ROMANDE_SEASON =["Winter","Autumnm"];
 const LOCATION_TI = "TI"
 const EUROPE_COUNTRIES = ["Norway","United Kingdom","Poland","France","Italy","GREECE","Spain"]
+const EURO_OUT= ["Japan,United Kingdom"];
 
 
 /**
@@ -44,6 +45,7 @@ showName(listOfOnlyBernWinterFish,"3-Fishes are only Bern canton in the Winter S
  */
 const sortFishesBasedOnExpireTime = sortFishesExpireDate(fishFarm)
 showName(sortFishesBasedOnExpireTime,"4-Sort Fishes based on expire time")
+
 /**
  * 5- Sort Fishes cheaper than 10 Fr accourding to Alfabetic from AB 
  */
@@ -75,12 +77,13 @@ showValue(listOfFishSalesRomanRegions,"9-Average Fishes Price in Winter and Auto
  * 10- How much kg in Stock to Ticino Canton
  */
 const listOfFishTotalStockSalesTicino = getListOfFishTotalStockSalesTicino(fishFarm,LOCATION_TI)
-showValue(listOfFishTotalStockSalesTicino,"10- How much kg in Stock to Ticino Canton")
+showValue(listOfFishTotalStockSalesTicino,"10- How much kg in Stock to Ticino Canton");
 
 
 /**
  * 11- Average Fishes sells at ZH and produce in Summer season from out of AB countries
  */
-const listOfFishFromOutsideEurope = getFishesFromOutsideEurope(fishFarm)
+const listOfFishFromOutsideEurope = getFishesFromOutsideEurope(fishFarm);
 const averageFishListZurihInSummer = getFishesZurihInSummer(listOfFishFromOutsideEurope)
 showValue(averageFishListZurihInSummer, " 11- Average Fishes sells at ZH and produce in Summer season from out of AB countries" )
+

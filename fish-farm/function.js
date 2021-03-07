@@ -19,10 +19,9 @@ function sortArrayByAlfabeticNumber(pArray){
         if (nameA > nameB) {
           return 1;
         }
-      
-        // names must be equal
+      // names must be equal
         return 0;
-      })
+      });
 }
 
 // Number 1 solution
@@ -82,7 +81,7 @@ function getHighestPrice(pArray){
         }
 // Number 9 solution
 
-function getAveragePriceForSRRWinterAutumn(pArray,pRomande){
+function getAveragePriceForSRRWinterAutumn(pArray){
     const filteredFishList = pArray.filter(item => 
         ((
             item.saleLocations.indexOf("GE") !== -1) || 
@@ -91,7 +90,7 @@ function getAveragePriceForSRRWinterAutumn(pArray,pRomande){
             ) 
         && 
         ((item.season == "Winter") || (item.season == "Autumn"))
-    )
+    );
     const total = filteredFishList.reduce(( total, item) => total + item.price, 0)
     return total/filteredFishList.length;
 }

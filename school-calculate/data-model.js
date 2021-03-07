@@ -43,3 +43,22 @@ const questions = [
     ["5*2", "4", "10", "9","B"],
     ["6*2", "3", "15", "12","C"]
 ];
+
+// all events in this function
+allEventListener();
+
+ function allEventListener(){
+     form.addEventListener("submit",addStudent);
+     allStudentListElement.addEventListener("click",startSession);
+    
+   }
+
+//Create new Student Object
+ function Student (name,surname,puan){
+    this.name = name;
+    this.surname = surname;
+    this.puan = puan;
+}
+
+// Registred students list array
+/* let studentList =[]; */
