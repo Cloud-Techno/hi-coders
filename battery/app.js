@@ -4,7 +4,7 @@
  *  daha sonra batarya arttikca veya azaldikca, yani duruma gore sekil alan bir yapi olusturulmali,
  *  duruma gore sekil degistiren yapiyi dinamik halde olmali,
  */
-function updateUI(pEnerjiLevel,pBattaryContainer){
+function updateUI(pEnerjiLevel, pBattaryContainer){
     pBattaryContainer.className = `enerji-level-${pEnerjiLevel}`
     }
  //enerji seviyem 0 da basliyacak

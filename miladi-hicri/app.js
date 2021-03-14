@@ -1,9 +1,6 @@
-// Controller
-/* document.getElementById("convert-Btn").addEventListener("click",convertDate);
+ document.getElementById("convert-Btn").addEventListener("click",convertDate);
 function convertDate(){
   let monthValue = document.getElementById("miladi").value;
   console.log(monthValue);
-} */
+} 
 
-let value = document.getElementById("miladi").value;
-console.log(value);
