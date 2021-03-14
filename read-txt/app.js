@@ -1,4 +1,5 @@
 const fs = require('fs');
 
-const data = fs.readFileSync("./files/exp.txt", "utf8");
-console.log(data);
+ fs.readFile("./files/exp.txt","utf8",function(error,data){
+     console.log(data);
+ });
