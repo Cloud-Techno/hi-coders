@@ -4,9 +4,9 @@ const PersonalList =(props)=> {
 
   return(
     <div className="row">
-      {props.personalNames.map((personal) => (
+      {props.personalNames.map((personal,i) => (
 
-        <div className="col-lg-4" key={personal.id}>
+        <div className="col-lg-4" key={i}>
             <div className="card mb-4 shadow-sm">
                 <div className="card-body">
                             <div className="d-flex justify-content-between align-items-center">{personal.firstName}</div>

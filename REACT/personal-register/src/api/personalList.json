@@ -21,13 +21,13 @@
       "about": "I am crazy!"
     },
     {
-      "firstName": "ferdi",
+      "firstName": "derya",
       "lastName": "ates",
-      "gender": "M",
-      "birhday": "22222-02-22",
-      "email": "ferdiates157@gmail.com",
-      "password": "222222",
-      "about": "22222",
+      "gender": "f",
+      "birhday": "1111-11-11",
+      "email": "aaaa@gmail.com",
+      "password": "secret",
+      "about": "aaaa",
       "id": 4
     }
   ]

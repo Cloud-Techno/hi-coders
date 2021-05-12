@@ -23,6 +23,7 @@ class RegisterInfo extends React.Component {
             />
           </div>
           <div className="col-2">
+            
             <Link 
             to="/add"
             type="button"
