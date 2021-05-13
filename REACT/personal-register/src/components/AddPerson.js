@@ -4,7 +4,7 @@ import serialize from "form-serialize"
 export default class AddPerson extends React.Component {
     handleFormSubmit=(event)=>{
         event.preventDefault();
-        const newPerson = serialize(event.target, { hash: true });
+        const newPerson = serialize(event.target, { hash: true });//form'daki bilgileri obje olarak almak icin serialize kullandim
        this.props.addNewPersonProps(newPerson)
     }
     render() {
@@ -42,7 +42,8 @@ return(
         <div className="form-row">
         <div className="form-group col-md-12">
                 <label htmlFor="inputName">Birth Day</label>
-                <input  type="date" 
+                <input  
+                type="date" 
                         className="form-control" 
                         name="birhday"/>
             </div>

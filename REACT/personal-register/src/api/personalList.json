@@ -29,6 +29,35 @@
       "password": "secret",
       "about": "aaaa",
       "id": 4
+    },
+    {
+      "firstName": "moun",
+      "lastName": "montagna",
+      "gender": "M",
+      "email": "fff@gma.com",
+      "password": "secret",
+      "about": "secret",
+      "id": 5
+    },
+    {
+      "firstName": "aaa",
+      "lastName": "aaa",
+      "gender": "m",
+      "birhday": "1111-11-11",
+      "email": "aaaa@ggg",
+      "password": "aaa",
+      "about": "aaa",
+      "id": 6
+    },
+    {
+      "firstName": "bbb",
+      "lastName": "bbb",
+      "gender": "bb",
+      "birhday": "0011-11-11",
+      "email": "111@gmail.com",
+      "password": "111",
+      "about": "111",
+      "id": 7
     }
   ]
 }

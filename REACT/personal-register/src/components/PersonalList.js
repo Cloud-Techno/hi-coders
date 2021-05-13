@@ -1,5 +1,7 @@
 import React from "react";
 
+import {Link } from "react-router-dom"
+
 const PersonalList =(props)=> {
 
   return(
@@ -16,7 +18,9 @@ const PersonalList =(props)=> {
                             <div className="d-flex justify-content-between align-items-center">{personal.email}</div>
                             <div className="d-flex justify-content-between align-items-center">{personal.password}</div>
                             <button type="button" onClick ={(event)=>props.deletePersonProp(personal)}className=" btn btn-md btn-outline-danger">Delete</button>
-                
+                <Link type="button"
+                className="btn btn-md btn-outline-primary"
+                to={`edit/${personal.id}`}>Edit</Link>
                            
                 </div>
             </div>

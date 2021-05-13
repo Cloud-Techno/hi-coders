@@ -1,8 +1,11 @@
 import React from "react";
 
+
 import PersonalList from "./PersonalList";
 import RegisterInfo from "./RegisterInfo";
 import AddPerson from "./AddPerson";
+import EditPerson from "./EditPerson";
+
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -16,7 +19,7 @@ class App extends React.Component {
   async componentDidMount() {
     const baseURL = "http://localhost:3002/personalNames";
     const response = await axios.get(baseURL);
-    console.log(response.data);
+ 
     this.setState({ personalNames: response.data });
   }
   // bu fonksiyon fetch ile kullanildi
@@ -35,11 +38,18 @@ class App extends React.Component {
   searchPerson = (event) => {
     this.setState({ searchQuery: event.target.value });
   };
+
+  // ADD PERSON
   addPerson = async (person) => {
     await axios.post(`http://localhost:3002/personalNames/`, person);
     this.setState((state) => ({
       personalNames: state.personalNames.concat([person]),
     }));
+  };
+  
+  // EDIT PERSON
+  editPerson = async (id,updatedPerson) => {
+    await axios.put(`http://localhost:3002/personalNames/${id}`, updatedPerson);
   };
 
   render() {
@@ -50,7 +60,9 @@ class App extends React.Component {
           .toLowerCase()
           .indexOf(this.state.searchQuery.toLowerCase()) !== -1
       );
-    });
+    }).sort((a,b)=>{
+      return (
+        a.id < b.id ? 1 : a.id > b.id ? -1 :0)} );
 
     return (
       <Router>
@@ -81,6 +93,18 @@ class App extends React.Component {
                   addNewPersonProps={(newPerson) => {
                     this.addPerson(newPerson);
                     history.push("/");
+                  }}
+                />
+              )}
+            ></Route>
+            <Route
+              path="/edit/:id"
+              render={(props) => (
+                <EditPerson
+               {...props}
+                onEditPerson={(id, newPerson) => {
+                    this.editPerson(id, newPerson);
+                    
                   }}
                 />
               )}
