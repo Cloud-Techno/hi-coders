@@ -60,7 +60,7 @@ return(
         <div className="form-row">
             <div className="form-group col-md-12">
                 <label htmlFor="inputName">Name</label>
-                <input   type="text" 
+                <input   type="text"   
                         className="form-control" 
                         name="firstName" required 
                         value={this.state.firstName}
